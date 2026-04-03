@@ -590,6 +590,20 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "CapaDatos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "7.0.0",
+          "Microsoft.SqlServer.Server": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CapaDatos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CapaDatos.dll": {}
+        }
       }
     }
   },
@@ -1646,10 +1660,16 @@
         "system.threading.tasks.extensions.4.6.3.nupkg.sha512",
         "system.threading.tasks.extensions.nuspec"
       ]
+    },
+    "CapaDatos/1.0.0": {
+      "type": "project",
+      "path": "../CapaDatos/CapaDatos.csproj",
+      "msbuildProject": "../CapaDatos/CapaDatos.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "CapaDatos >= 1.0.0",
       "Microsoft.Data.SqlClient >= 7.0.0",
       "Microsoft.SqlServer.Server >= 1.0.0"
     ]
@@ -1661,11 +1681,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Emerson Humberto\\Desktop\\Aplicaciones\\CRUD_Productos\\CapaNegocio\\CapaNegocio.csproj",
+      "projectUniqueName": "C:\\Users\\Emerson Humberto\\Documents\\CRUD_PRODUCTOS\\CapaNegocio\\CapaNegocio.csproj",
       "projectName": "CapaNegocio",
-      "projectPath": "C:\\Users\\Emerson Humberto\\Desktop\\Aplicaciones\\CRUD_Productos\\CapaNegocio\\CapaNegocio.csproj",
+      "projectPath": "C:\\Users\\Emerson Humberto\\Documents\\CRUD_PRODUCTOS\\CapaNegocio\\CapaNegocio.csproj",
       "packagesPath": "C:\\Users\\Emerson Humberto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Emerson Humberto\\Desktop\\Aplicaciones\\CRUD_Productos\\CapaNegocio\\obj\\",
+      "outputPath": "C:\\Users\\Emerson Humberto\\Documents\\CRUD_PRODUCTOS\\CapaNegocio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1686,7 +1706,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Emerson Humberto\\Documents\\CRUD_PRODUCTOS\\CapaDatos\\CapaDatos.csproj": {
+              "projectPath": "C:\\Users\\Emerson Humberto\\Documents\\CRUD_PRODUCTOS\\CapaDatos\\CapaDatos.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

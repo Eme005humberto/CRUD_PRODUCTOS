@@ -1661,11 +1661,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Emerson Humberto\\Desktop\\Aplicaciones\\CRUD_Productos\\CapaDatos\\CapaDatos.csproj",
+      "projectUniqueName": "C:\\Users\\Emerson Humberto\\Documents\\CRUD_PRODUCTOS\\CapaDatos\\CapaDatos.csproj",
       "projectName": "CapaDatos",
-      "projectPath": "C:\\Users\\Emerson Humberto\\Desktop\\Aplicaciones\\CRUD_Productos\\CapaDatos\\CapaDatos.csproj",
+      "projectPath": "C:\\Users\\Emerson Humberto\\Documents\\CRUD_PRODUCTOS\\CapaDatos\\CapaDatos.csproj",
       "packagesPath": "C:\\Users\\Emerson Humberto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Emerson Humberto\\Desktop\\Aplicaciones\\CRUD_Productos\\CapaDatos\\obj\\",
+      "outputPath": "C:\\Users\\Emerson Humberto\\Documents\\CRUD_PRODUCTOS\\CapaDatos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

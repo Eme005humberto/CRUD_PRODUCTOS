@@ -1661,11 +1661,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Emerson Humberto\\Desktop\\Aplicaciones\\CRUD_Productos\\CapaPresentacion\\CapaPresentacion.csproj",
+      "projectUniqueName": "C:\\Users\\Emerson Humberto\\Documents\\CRUD_PRODUCTOS\\CapaPresentacion\\CapaPresentacion.csproj",
       "projectName": "CapaPresentacion",
-      "projectPath": "C:\\Users\\Emerson Humberto\\Desktop\\Aplicaciones\\CRUD_Productos\\CapaPresentacion\\CapaPresentacion.csproj",
+      "projectPath": "C:\\Users\\Emerson Humberto\\Documents\\CRUD_PRODUCTOS\\CapaPresentacion\\CapaPresentacion.csproj",
       "packagesPath": "C:\\Users\\Emerson Humberto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Emerson Humberto\\Desktop\\Aplicaciones\\CRUD_Productos\\CapaPresentacion\\obj\\",
+      "outputPath": "C:\\Users\\Emerson Humberto\\Documents\\CRUD_PRODUCTOS\\CapaPresentacion\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

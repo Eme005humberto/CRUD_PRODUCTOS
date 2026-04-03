@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LoItO5XA6r8=",
+  "dgSpecHash": "KsdqFAcvmmQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Emerson Humberto\\Desktop\\Aplicaciones\\CRUD_Productos\\CapaNegocio\\CapaNegocio.csproj",
+  "projectFilePath": "C:\\Users\\Emerson Humberto\\Documents\\CRUD_PRODUCTOS\\CapaNegocio\\CapaNegocio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Emerson Humberto\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\10.0.3\\microsoft.bcl.asyncinterfaces.10.0.3.nupkg.sha512",
     "C:\\Users\\Emerson Humberto\\.nuget\\packages\\microsoft.bcl.cryptography\\8.0.0\\microsoft.bcl.cryptography.8.0.0.nupkg.sha512",
