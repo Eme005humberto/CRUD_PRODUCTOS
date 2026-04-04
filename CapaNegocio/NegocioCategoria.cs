@@ -16,9 +16,9 @@ namespace CapaNegocio
         {
             return pr.MostrarCategorias(); //Invocamos el metodo que nos servira para mostrar la info de las categorias
         }
-        public void InsertData(string nombre)
+        public void InsertData(string Categoria)
         {
-            pr.InsertarCategorias(nombre); //Invocamos el metodo que nos servira para insertar la info de las categorias
+            pr.InsertarCategorias(Categoria); //Invocamos el metodo que nos servira para insertar la info de las categorias
         }
 
         public void UpdateData(string categoria, int IdCategoria)

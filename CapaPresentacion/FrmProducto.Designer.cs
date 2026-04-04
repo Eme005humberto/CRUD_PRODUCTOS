@@ -49,6 +49,7 @@
             label8 = new Label();
             button5 = new Button();
             comboBox1 = new ComboBox();
+            btnCategoria = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -238,11 +239,22 @@
             comboBox1.Size = new Size(121, 23);
             comboBox1.TabIndex = 18;
             // 
+            // btnCategoria
+            // 
+            btnCategoria.Location = new Point(642, 71);
+            btnCategoria.Name = "btnCategoria";
+            btnCategoria.Size = new Size(75, 23);
+            btnCategoria.TabIndex = 19;
+            btnCategoria.Text = "Categorias";
+            btnCategoria.UseVisualStyleBackColor = true;
+            btnCategoria.Click += btnCategoria_Click;
+            // 
             // FrmProductos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(729, 427);
+            Controls.Add(btnCategoria);
             Controls.Add(comboBox1);
             Controls.Add(button5);
             Controls.Add(label8);
@@ -264,6 +276,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "FrmProductos";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Registro de productos";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -296,5 +309,6 @@
         private Label label8;
         private Button button5;
         private ComboBox comboBox1;
+        private Button btnCategoria;
     }
 }

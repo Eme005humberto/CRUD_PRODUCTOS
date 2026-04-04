@@ -1,4 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using System.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -30,13 +30,19 @@ namespace CapaDatos
         //Metodo para mostrar las categorias existentes
         public DataTable MostrarCategorias()
         {
-            cmd.Connection = Conexion.ConectarDB();
-            cmd.CommandText = "SP_MostrarCategorias";
-            cmd.CommandType = CommandType.StoredProcedure;
-            leer = cmd.ExecuteReader();
-            table.Load(leer);
-            Conexion.ConectarDB().Close();
-            return table;
+            DataTable table = new DataTable();
+            using (SqlConnection conn = Conexion.ConectarDB())
+            {
+                using (SqlCommand cmd = new SqlCommand("SP_MostrarCategorias", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        table.Load(reader);
+                    }
+                }
+                return table;
+            }
         }
 
         public void InsertarProductos(string nombre, decimal precio, int stock, int idCategoria)
@@ -79,12 +85,15 @@ namespace CapaDatos
         //Metodos de categorias
         public void InsertarCategorias(string categoria)
         {
-            cmd.Connection = Conexion.ConectarDB();
-            cmd.CommandText = "SP_InsertarCategorias";
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Categoria", categoria);
-            cmd.ExecuteNonQuery();
-            cmd.Parameters.Clear();
+            using(SqlConnection conn = Conexion.ConectarDB())
+            {
+                using (SqlCommand cmd = new SqlCommand("SP_InsertarCategorias", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Categoria", categoria);
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
 
         public void ModificarCategorias(string categoria, int IdCategoria)

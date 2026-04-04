@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
-using Microsoft.Data.SqlClient;
+using System.Data.SqlClient;
+
 namespace CapaDatos
 {
     public class Conexion
     {
-
         public static SqlConnection ConectarDB()
         {
             string ConexionDb = "Server=DESKTOP-EMM9D05;Database=CRUD_PRODUCTOS;Trusted_Connection=True;";
