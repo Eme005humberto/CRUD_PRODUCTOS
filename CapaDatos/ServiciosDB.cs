@@ -98,23 +98,29 @@ namespace CapaDatos
 
         public void ModificarCategorias(string categoria, int IdCategoria)
         {
-            cmd.Connection = Conexion.ConectarDB();
-            cmd.CommandText = "SP_ModificarCategorias";
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Categoria", categoria);
-            cmd.Parameters.AddWithValue("@IdCategoria", IdCategoria);
-            cmd.ExecuteNonQuery();
-            cmd.Parameters.Clear();
+            using(SqlConnection conn = Conexion.ConectarDB())
+            {
+                using (SqlCommand cmd = new SqlCommand("SP_ModificarCategorias", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Categoria", categoria);
+                    cmd.Parameters.AddWithValue("@IdCategoria", IdCategoria);
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
 
         public void EliminarCategorias(int IdCategoria)
         {
-            cmd.Connection = Conexion.ConectarDB();
-            cmd.CommandText = "SP_EliminarCategoria";
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@IdCategoria", IdCategoria);
-            cmd.ExecuteNonQuery();
-            cmd.Parameters.Clear();
+            using (SqlConnection conn = Conexion.ConectarDB())
+            {
+                using (SqlCommand cmd = new SqlCommand("SP_EliminarCategoria", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@IdCategoria", IdCategoria);
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
     }
 }

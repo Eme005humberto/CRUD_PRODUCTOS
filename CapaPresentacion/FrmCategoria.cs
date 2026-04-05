@@ -56,6 +56,56 @@ namespace CapaPresentacion
                     MessageBox.Show(ex.ToString());
                 }
             }
+            if (editar == true)
+            {
+                try
+                {
+                    serviciosDB.UpdateData(txtCategoria.Text, Convert.ToInt32(id));
+                    MessageBox.Show("Categoria Editada!!");
+                    MostrarCategoria();
+                    txtCategoria.Clear();
+                    editar = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                editar = true;
+                id = dataGridView1.CurrentRow.Cells["IdCategoria"].Value.ToString();
+                txtCategoria.Text = dataGridView1.CurrentRow.Cells["Categoria"].Value.ToString();
+
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila por favor");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            txtCategoria.Clear();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if(dataGridView1.SelectedRows.Count > 0)
+            {
+                id = dataGridView1.CurrentRow.Cells["IdCategoria"].Value.ToString();
+                serviciosDB.DeleteData(Convert.ToInt32(id));
+                MessageBox.Show("Categoria Eliminada!!");
+                MostrarCategoria();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila por favor");
+            }
         }
     }
 }
