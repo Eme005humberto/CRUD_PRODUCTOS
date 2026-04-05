@@ -34,13 +34,13 @@
             dataGridView1 = new DataGridView();
             label2 = new Label();
             label3 = new Label();
-            textBox1 = new TextBox();
+            txtNombre = new TextBox();
             label4 = new Label();
-            textBox2 = new TextBox();
+            txtPrecio = new TextBox();
             label5 = new Label();
-            textBox3 = new TextBox();
+            txtStock = new TextBox();
             label6 = new Label();
-            textBox4 = new TextBox();
+            txtCategoria = new TextBox();
             label7 = new Label();
             button1 = new Button();
             button2 = new Button();
@@ -111,12 +111,12 @@
             label3.TabIndex = 3;
             label3.Text = "Nombre:";
             // 
-            // textBox1
+            // txtNombre
             // 
-            textBox1.Location = new Point(495, 185);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(152, 23);
-            textBox1.TabIndex = 4;
+            txtNombre.Location = new Point(495, 185);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(152, 23);
+            txtNombre.TabIndex = 4;
             // 
             // label4
             // 
@@ -127,12 +127,12 @@
             label4.TabIndex = 5;
             label4.Text = "Precio:";
             // 
-            // textBox2
+            // txtPrecio
             // 
-            textBox2.Location = new Point(495, 215);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(152, 23);
-            textBox2.TabIndex = 6;
+            txtPrecio.Location = new Point(495, 215);
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.Size = new Size(152, 23);
+            txtPrecio.TabIndex = 6;
             // 
             // label5
             // 
@@ -143,12 +143,12 @@
             label5.TabIndex = 7;
             label5.Text = "Stock:";
             // 
-            // textBox3
+            // txtStock
             // 
-            textBox3.Location = new Point(495, 246);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(73, 23);
-            textBox3.TabIndex = 8;
+            txtStock.Location = new Point(495, 246);
+            txtStock.Name = "txtStock";
+            txtStock.Size = new Size(73, 23);
+            txtStock.TabIndex = 8;
             // 
             // label6
             // 
@@ -159,12 +159,12 @@
             label6.TabIndex = 9;
             label6.Text = "Categoria:";
             // 
-            // textBox4
+            // txtCategoria
             // 
-            textBox4.Location = new Point(495, 276);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(152, 23);
-            textBox4.TabIndex = 10;
+            txtCategoria.Location = new Point(495, 276);
+            txtCategoria.Name = "txtCategoria";
+            txtCategoria.Size = new Size(152, 23);
+            txtCategoria.TabIndex = 10;
             // 
             // label7
             // 
@@ -183,6 +183,7 @@
             button1.TabIndex = 12;
             button1.Text = "Agregar";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -192,6 +193,7 @@
             button2.TabIndex = 13;
             button2.Text = "Modificar";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -201,6 +203,7 @@
             button3.TabIndex = 14;
             button3.Text = "Eliminar";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -210,6 +213,7 @@
             button4.TabIndex = 15;
             button4.Text = "Limpiar";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // label8
             // 
@@ -263,13 +267,13 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label7);
-            Controls.Add(textBox4);
+            Controls.Add(txtCategoria);
             Controls.Add(label6);
-            Controls.Add(textBox3);
+            Controls.Add(txtStock);
             Controls.Add(label5);
-            Controls.Add(textBox2);
+            Controls.Add(txtPrecio);
             Controls.Add(label4);
-            Controls.Add(textBox1);
+            Controls.Add(txtNombre);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(panel2);
@@ -278,6 +282,7 @@
             Name = "FrmProductos";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Registro de productos";
+            Load += FrmProductos_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -294,13 +299,13 @@
         private DataGridView dataGridView1;
         private Label label2;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox txtNombre;
         private Label label4;
-        private TextBox textBox2;
+        private TextBox txtPrecio;
         private Label label5;
-        private TextBox textBox3;
+        private TextBox txtStock;
         private Label label6;
-        private TextBox textBox4;
+        private TextBox txtCategoria;
         private Label label7;
         private Button button1;
         private Button button2;

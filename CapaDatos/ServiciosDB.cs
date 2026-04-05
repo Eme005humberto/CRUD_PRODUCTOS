@@ -20,7 +20,7 @@ namespace CapaDatos
         public DataTable MostrarProductos()
         {
             cmd.Connection = Conexion.ConectarDB();
-            cmd.CommandText = "SP_MostrarProductoss";
+            cmd.CommandText = "SP_MostrarProductos";
             cmd.CommandType = CommandType.StoredProcedure;
             leer = cmd.ExecuteReader();
             table.Load(leer);
