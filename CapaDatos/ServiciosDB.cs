@@ -17,16 +17,6 @@ namespace CapaDatos
         SqlCommand cmd = new SqlCommand();
 
 
-        public DataTable MostrarProductos()
-        {
-            cmd.Connection = Conexion.ConectarDB();
-            cmd.CommandText = "SP_MostrarProductos";
-            cmd.CommandType = CommandType.StoredProcedure;
-            leer = cmd.ExecuteReader();
-            table.Load(leer);
-            Conexion.ConectarDB().Close();
-            return table;
-        }
         //Metodo para mostrar las categorias existentes
         public DataTable MostrarCategorias()
         {
@@ -45,41 +35,66 @@ namespace CapaDatos
             }
         }
 
+        public DataTable MostrarProductos()
+        {
+            DataTable table = new DataTable();
+            using (SqlConnection conn = Conexion.ConectarDB())
+            {
+                using (SqlCommand cmd = new SqlCommand("SP_MostrarProductos", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        table.Load(reader);
+                    }
+                }
+                return table;
+            }
+        }
         public void InsertarProductos(string nombre, decimal precio, int stock, int idCategoria)
         {
-            cmd.Connection = Conexion.ConectarDB();
-            cmd.CommandText = "SP_InsertarProductos";
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Nombre", nombre);
-            cmd.Parameters.AddWithValue("@Precio", precio);
-            cmd.Parameters.AddWithValue("@Stock", stock);
-            cmd.Parameters.AddWithValue("@IdCategoria", idCategoria);
-            cmd.ExecuteNonQuery();
-            cmd.Parameters.Clear();
+            using(SqlConnection conn = Conexion.ConectarDB())
+            {
+                using (SqlCommand cmd = new SqlCommand("SP_InsertarProductos", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Nombre", nombre);
+                    cmd.Parameters.AddWithValue("@Precio", precio);
+                    cmd.Parameters.AddWithValue("@Stock", stock);
+                    cmd.Parameters.AddWithValue("@IdCategoria", idCategoria);
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
 
         public void ActualizarProductos(int IdProducto, string nombre, decimal precio, int stock, int idCategoria)
         {
-            cmd.Connection = Conexion.ConectarDB();
-            cmd.CommandText = "SP_ActualizarProducto";
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Nombre", nombre);
-            cmd.Parameters.AddWithValue("@Precio", precio);
-            cmd.Parameters.AddWithValue("@Stock", stock);
-            cmd.Parameters.AddWithValue("@IdCategoria", idCategoria);
-            cmd.Parameters.AddWithValue("@IdProducto", IdProducto);
-            cmd.ExecuteNonQuery();
-            cmd.Parameters.Clear();
+            using(SqlConnection conn = Conexion.ConectarDB())
+            {
+                using (SqlCommand cmd = new SqlCommand("SP_ActualizarProducto", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@IdProducto", IdProducto);
+                    cmd.Parameters.AddWithValue("@Nombre", nombre);
+                    cmd.Parameters.AddWithValue("@Precio", precio);
+                    cmd.Parameters.AddWithValue("@Stock", stock);
+                    cmd.Parameters.AddWithValue("@IdCategoria", idCategoria);
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
 
         public void EliminarProducto(int IdProducto)
         {
-            cmd.Connection = Conexion.ConectarDB();
-            cmd.CommandText = "SP_EliminarProducto";
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@IdProducto", IdProducto);
-            cmd.ExecuteNonQuery();
-            cmd.Parameters.Clear();
+            using (SqlConnection conn = Conexion.ConectarDB())
+            {
+                using (SqlCommand cmd = new SqlCommand("SP_EliminarProducto", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@IdProducto", IdProducto);
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
 
         //Metodos de categorias

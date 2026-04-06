@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Emerson Humberto\\Documents\\CRUD_PRODUCTOS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F87969D-8B9B-4B15-8F9E-52C9FFBA700D}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\emerson humberto\\documents\\crud_productos\\capapresentacion\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F87969D-8B9B-4B15-8F9E-52C9FFBA700D}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A6C54838-423A-4131-B1C3-460B83A48E48}|CapaDatos\\CapaDatos.csproj|c:\\users\\emerson humberto\\documents\\crud_productos\\capadatos\\serviciosdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6C54838-423A-4131-B1C3-460B83A48E48}|CapaDatos\\CapaDatos.csproj|solutionrelative:capadatos\\serviciosdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9A8C51B6-F26C-4429-B161-BBF247BA6D04}|CapaNegocio\\CapaNegocio.csproj|c:\\users\\emerson humberto\\documents\\crud_productos\\capanegocio\\negocioproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A8C51B6-F26C-4429-B161-BBF247BA6D04}|CapaNegocio\\CapaNegocio.csproj|solutionrelative:capanegocio\\negocioproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F87969D-8B9B-4B15-8F9E-52C9FFBA700D}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\emerson humberto\\documents\\crud_productos\\capapresentacion\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F87969D-8B9B-4B15-8F9E-52C9FFBA700D}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F87969D-8B9B-4B15-8F9E-52C9FFBA700D}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\emerson humberto\\documents\\crud_productos\\capapresentacion\\frmcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -68,14 +68,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "FrmProducto.cs [Dise\u00F1o]",
+              "Title": "FrmProducto.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Emerson Humberto\\Documents\\CRUD_PRODUCTOS\\CapaPresentacion\\FrmProducto.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\FrmProducto.cs",
-              "ToolTip": "C:\\Users\\Emerson Humberto\\Documents\\CRUD_PRODUCTOS\\CapaPresentacion\\FrmProducto.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CapaPresentacion\\FrmProducto.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\Emerson Humberto\\Documents\\CRUD_PRODUCTOS\\CapaPresentacion\\FrmProducto.cs [Design]",
+              "RelativeToolTip": "CapaPresentacion\\FrmProducto.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-04T00:02:15.107Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -91,39 +91,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ServiciosDB.cs",
               "DocumentMoniker": "C:\\Users\\Emerson Humberto\\Documents\\CRUD_PRODUCTOS\\CapaDatos\\ServiciosDB.cs",
               "RelativeDocumentMoniker": "CapaDatos\\ServiciosDB.cs",
               "ToolTip": "C:\\Users\\Emerson Humberto\\Documents\\CRUD_PRODUCTOS\\CapaDatos\\ServiciosDB.cs",
               "RelativeToolTip": "CapaDatos\\ServiciosDB.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAkwDgAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAvwEkAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-04T21:12:24.379Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "FrmProducto.cs",
               "DocumentMoniker": "C:\\Users\\Emerson Humberto\\Documents\\CRUD_PRODUCTOS\\CapaPresentacion\\FrmProducto.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\FrmProducto.cs",
               "ToolTip": "C:\\Users\\Emerson Humberto\\Documents\\CRUD_PRODUCTOS\\CapaPresentacion\\FrmProducto.cs",
               "RelativeToolTip": "CapaPresentacion\\FrmProducto.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAswDMAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAADwAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-04T20:07:52.155Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "NegocioProductos.cs",
               "DocumentMoniker": "C:\\Users\\Emerson Humberto\\Documents\\CRUD_PRODUCTOS\\CapaNegocio\\NegocioProductos.cs",
               "RelativeDocumentMoniker": "CapaNegocio\\NegocioProductos.cs",
               "ToolTip": "C:\\Users\\Emerson Humberto\\Documents\\CRUD_PRODUCTOS\\CapaNegocio\\NegocioProductos.cs",
               "RelativeToolTip": "CapaNegocio\\NegocioProductos.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAYwBYAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAewBsAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-05T03:33:55.519Z",
               "EditorCaption": ""
