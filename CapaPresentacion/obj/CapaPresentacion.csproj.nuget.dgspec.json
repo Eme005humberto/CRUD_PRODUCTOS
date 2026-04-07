@@ -59,6 +59,10 @@
               "target": "Package",
               "version": "[1.0.0, )"
             },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2026.2.4, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.9.1, )"
@@ -142,6 +146,10 @@
             "Microsoft.SqlServer.Server": {
               "target": "Package",
               "version": "[1.0.0, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2026.2.4, )"
             }
           },
           "imports": [
@@ -225,6 +233,10 @@
             "Microsoft.SqlServer.Server": {
               "target": "Package",
               "version": "[1.0.0, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2026.2.4, )"
             }
           },
           "imports": [

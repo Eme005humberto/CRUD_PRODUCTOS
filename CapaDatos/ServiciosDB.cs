@@ -34,7 +34,7 @@ namespace CapaDatos
                 return table;
             }
         }
-
+        //Metodo para mostrar los productos existentes
         public DataTable MostrarProductos()
         {
             DataTable table = new DataTable();
@@ -51,6 +51,7 @@ namespace CapaDatos
                 return table;
             }
         }
+        //Metodos de productos para ingresar los nuevos registros
         public void InsertarProductos(string nombre, decimal precio, int stock, int idCategoria)
         {
             using(SqlConnection conn = Conexion.ConectarDB())
@@ -66,7 +67,7 @@ namespace CapaDatos
                 }
             }
         }
-
+        //Metodo para actualizar los registros existentes
         public void ActualizarProductos(int IdProducto, string nombre, decimal precio, int stock, int idCategoria)
         {
             using(SqlConnection conn = Conexion.ConectarDB())
@@ -83,7 +84,7 @@ namespace CapaDatos
                 }
             }
         }
-
+        //Metodo para eliminar los registros existentes
         public void EliminarProducto(int IdProducto)
         {
             using (SqlConnection conn = Conexion.ConectarDB())
@@ -98,6 +99,7 @@ namespace CapaDatos
         }
 
         //Metodos de categorias
+        //Metodo para Insertar categorias
         public void InsertarCategorias(string categoria)
         {
             using(SqlConnection conn = Conexion.ConectarDB())
@@ -110,7 +112,7 @@ namespace CapaDatos
                 }
             }
         }
-
+        //Metodo para Insertar categorias
         public void ModificarCategorias(string categoria, int IdCategoria)
         {
             using(SqlConnection conn = Conexion.ConectarDB())
@@ -124,7 +126,7 @@ namespace CapaDatos
                 }
             }
         }
-
+        //Metodo para eliminar los registros existentes
         public void EliminarCategorias(int IdCategoria)
         {
             using (SqlConnection conn = Conexion.ConectarDB())

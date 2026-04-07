@@ -234,6 +234,7 @@
             button5.TabIndex = 17;
             button5.Text = "Descargar PDF";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click_1;
             // 
             // comboBox1
             // 
