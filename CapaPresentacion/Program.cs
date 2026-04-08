@@ -1,3 +1,5 @@
+using QuestPDF.Infrastructure;
+
 namespace CapaPresentacion
 {
     internal static class Program
@@ -8,6 +10,7 @@ namespace CapaPresentacion
         [STAThread]
         static void Main()
         {
+            QuestPDF.Settings.License = LicenseType.Community;
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();

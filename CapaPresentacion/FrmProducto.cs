@@ -143,7 +143,7 @@ namespace CapaPresentacion
                 MessageBox.Show(ex.ToString());
             }
         }
-
+        //Metodo para obtener el reporte
         private List<ReporteCategoria> ObtenerDatosReporte(int idCategoria, string nombreCategoria)
         {
             List<ReporteCategoria> lista = new List<ReporteCategoria>();
@@ -156,7 +156,7 @@ namespace CapaPresentacion
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        cmd.Parameters.Add("@Categoria", SqlDbType.Int).Value = idCategoria;
+                        cmd.Parameters.Add("@Categoria", SqlDbType.VarChar).Value = nombreCategoria;
 
                         if (conn.State != ConnectionState.Open)
                             conn.Open();
