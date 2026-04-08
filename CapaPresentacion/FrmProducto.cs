@@ -24,6 +24,7 @@ namespace CapaPresentacion
         {
             MostrarProductos();
             MostrarCategorias();
+            MostrarCategorias_();
         }
         //Metodo para mostrar los productos en el datagridview
         public void MostrarProductos()
@@ -45,10 +46,9 @@ namespace CapaPresentacion
             {
                 try
                 {
-                    serviciosDB.InsertData(txtNombre.Text, decimal.Parse(txtPrecio.Text), int.Parse(txtStock.Text), int.Parse(txtCategoria.Text));
+                    serviciosDB.InsertData(txtNombre.Text, decimal.Parse(txtPrecio.Text), int.Parse(txtStock.Text), Convert.ToInt32(txtCategoria.SelectedValue));
                     MessageBox.Show("Producto Agregado!!");
                     MostrarProductos();
-                    txtCategoria.Clear();
                     txtPrecio.Clear();
                     txtStock.Clear();
                     txtNombre.Clear();
@@ -63,10 +63,9 @@ namespace CapaPresentacion
             {
                 try
                 {
-                    serviciosDB.UpdateData(Convert.ToInt32(id), txtNombre.Text, decimal.Parse(txtPrecio.Text), int.Parse(txtStock.Text), int.Parse(txtCategoria.Text));
+                    serviciosDB.UpdateData(Convert.ToInt32(id), txtNombre.Text, decimal.Parse(txtPrecio.Text), int.Parse(txtStock.Text), Convert.ToInt32(txtCategoria.SelectedValue));
                     MessageBox.Show("Producto Editado!!");
                     MostrarProductos();
-                    txtCategoria.Clear();
                     txtPrecio.Clear();
                     txtStock.Clear();
                     txtNombre.Clear();
@@ -84,7 +83,6 @@ namespace CapaPresentacion
             txtNombre.Clear();
             txtPrecio.Clear();
             txtStock.Clear();
-            txtCategoria.Clear();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -256,7 +254,7 @@ namespace CapaPresentacion
 
                     if (saveFileDialog.ShowDialog() == DialogResult.OK)
                     {
-                        var documento = new ReportePDF(datos,Categoria);
+                        var documento = new ReportePDF(datos, Categoria);
                         documento.GeneratePdf(saveFileDialog.FileName);
 
                         MessageBox.Show("PDF generado correctamente.");
@@ -268,5 +266,42 @@ namespace CapaPresentacion
                 MessageBox.Show("Error al generar el PDF: " + ex.Message);
             }
         }
+
+        private void txtCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        public void MostrarCategorias_()
+        {
+            try
+            {
+                using (SqlConnection conn = CapaDatos.Conexion.ConectarDB())
+                {
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM CATEGORIA", conn))
+                    {
+                        cmd.CommandType = CommandType.Text;
+
+                        if (conn.State != ConnectionState.Open)
+                            conn.Open();
+
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+
+                            txtCategoria.DataSource = dt;
+                            txtCategoria.DisplayMember = "Categoria";
+                            txtCategoria.ValueMember = "IdCategoria";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
     }
 }

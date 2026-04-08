@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -95,12 +96,48 @@ namespace CapaPresentacion
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if(dataGridView1.SelectedRows.Count > 0)
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                id = dataGridView1.CurrentRow.Cells["IdCategoria"].Value.ToString();
-                serviciosDB.DeleteData(Convert.ToInt32(id));
-                MessageBox.Show("Categoria Eliminada!!");
-                MostrarCategoria();
+                try
+                {
+                    id = dataGridView1.CurrentRow.Cells["IdCategoria"].Value.ToString();
+                    serviciosDB.DeleteData(Convert.ToInt32(id));
+
+                    MessageBox.Show("Categoría eliminada correctamente.");
+                    MostrarCategoria();
+                    txtCategoria.Clear();
+                }
+                catch (SqlException ex)
+                {
+                    if (ex.Number == 547)
+                    {
+                        MessageBox.Show(
+                            "No se puede eliminar esta categoría porque tiene productos relacionados.\n\n" +
+                            "Primero elimina los productos asociados a esta categoría y luego intenta eliminarla nuevamente.",
+                            "Categoría relacionada",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning
+                        );
+                    }
+                    else
+                    {
+                        MessageBox.Show(
+                            "Ocurrió un error en la base de datos:\n" + ex.Message,
+                            "Error",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error
+                        );
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(
+                        "Ocurrió un error:\n" + ex.Message,
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+                }
             }
             else
             {

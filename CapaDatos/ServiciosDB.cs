@@ -97,7 +97,6 @@ namespace CapaDatos
                 }
             }
         }
-
         //Metodos de categorias
         //Metodo para Insertar categorias
         public void InsertarCategorias(string categoria)
@@ -131,6 +130,7 @@ namespace CapaDatos
         {
             using (SqlConnection conn = Conexion.ConectarDB())
             {
+                   
                 using (SqlCommand cmd = new SqlCommand("SP_EliminarCategoria", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;

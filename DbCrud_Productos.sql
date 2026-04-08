@@ -26,7 +26,7 @@ EXEC SP_MostrarCategorias
 ALTER PROCEDURE SP_MostrarProductos
 AS BEGIN
 SELECT p.IdProducto, p.Nombre, p.Precio , p.Stock ,c.Categoria FROM PRODUCTOS AS p
-LEFT JOIN CATEGORIA AS c  ON p.IdProducto = c.IdCategoria
+LEFT JOIN CATEGORIA AS c  ON p.IdCategoria = c.IdCategoria
 END
 
 EXEC SP_MostrarProductos

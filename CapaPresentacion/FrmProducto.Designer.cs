@@ -40,7 +40,6 @@
             label5 = new Label();
             txtStock = new TextBox();
             label6 = new Label();
-            txtCategoria = new TextBox();
             label7 = new Label();
             button1 = new Button();
             button2 = new Button();
@@ -50,6 +49,7 @@
             button5 = new Button();
             comboBox1 = new ComboBox();
             btnCategoria = new Button();
+            txtCategoria = new ComboBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -159,13 +159,6 @@
             label6.TabIndex = 9;
             label6.Text = "Categoria:";
             // 
-            // txtCategoria
-            // 
-            txtCategoria.Location = new Point(495, 276);
-            txtCategoria.Name = "txtCategoria";
-            txtCategoria.Size = new Size(152, 23);
-            txtCategoria.TabIndex = 10;
-            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -254,11 +247,21 @@
             btnCategoria.UseVisualStyleBackColor = true;
             btnCategoria.Click += btnCategoria_Click;
             // 
+            // txtCategoria
+            // 
+            txtCategoria.FormattingEnabled = true;
+            txtCategoria.Location = new Point(495, 281);
+            txtCategoria.Name = "txtCategoria";
+            txtCategoria.Size = new Size(121, 23);
+            txtCategoria.TabIndex = 20;
+            txtCategoria.SelectedIndexChanged += txtCategoria_SelectedIndexChanged;
+            // 
             // FrmProductos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(729, 427);
+            Controls.Add(txtCategoria);
             Controls.Add(btnCategoria);
             Controls.Add(comboBox1);
             Controls.Add(button5);
@@ -268,7 +271,6 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label7);
-            Controls.Add(txtCategoria);
             Controls.Add(label6);
             Controls.Add(txtStock);
             Controls.Add(label5);
@@ -306,7 +308,6 @@
         private Label label5;
         private TextBox txtStock;
         private Label label6;
-        private TextBox txtCategoria;
         private Label label7;
         private Button button1;
         private Button button2;
@@ -316,5 +317,6 @@
         private Button button5;
         private ComboBox comboBox1;
         private Button btnCategoria;
+        private ComboBox txtCategoria;
     }
 }
